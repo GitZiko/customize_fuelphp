@@ -94,7 +94,7 @@ class Generate_Scaffold extends \Oil\Generate_Scaffold
         $data = array_merge(compact(array('controller_name', 'model_name', 'model_path', 'view_path', 'uri')), $data);
 
         /** Generate the Model **/
-        $model = \View::forge(static::$view_subdir.$subfolder.'/model', $data);
+        $model = \View::forge(APPPATH.'scaffolding/orm/model'.'.php', $data);
 
         \Oil\Generate::create(
             APPPATH.'classes/model/'.$model_path.'.php',
@@ -103,33 +103,33 @@ class Generate_Scaffold extends \Oil\Generate_Scaffold
         );
 
         /** Generate the Controller **/
-        $controller = \View::forge(static::$view_subdir.$subfolder.'/controller', $data);
+        $controller = \View::forge(APPPATH.'scaffolding/orm/controller'.'.php', $data);
 
         $controller->actions = array(
             array(
                 'name'   => 'index',
                 'params' => '',
-                'code'   => \View::forge(static::$view_subdir.$subfolder.'/actions/index', $data),
+                'code'   => \View::forge(APPPATH.'scaffolding/orm/actions/index'.'.php', $data),
             ),
             array(
                 'name'   => 'view',
                 'params' => '$id = null',
-                'code'   => \View::forge(static::$view_subdir.$subfolder.'/actions/view', $data),
+                'code'   => \View::forge(APPPATH.'scaffolding/orm/actions/view'.'.php', $data),
             ),
             array(
                 'name'   => 'create',
                 'params' => '',
-                'code'   => \View::forge(static::$view_subdir.$subfolder.'/actions/create', $data),
+                'code'   => \View::forge(APPPATH.'scaffolding/orm/actions/create'.'.php', $data),
             ),
             array(
                 'name'   => 'edit',
                 'params' => '$id = null',
-                'code'   => \View::forge(static::$view_subdir.$subfolder.'/actions/edit', $data),
+                'code'   => \View::forge(APPPATH.'scaffolding/orm/actions/edit'.'.php', $data),
             ),
             array(
                 'name'   => 'delete',
                 'params' => '$id = null',
-                'code'   => \View::forge(static::$view_subdir.$subfolder.'/actions/delete', $data),
+                'code'   => \View::forge(APPPATH.'scaffolding/orm/actions/delete'.'.php', $data),
             ),
         );
 
