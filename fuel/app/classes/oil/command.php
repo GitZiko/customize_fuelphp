@@ -58,7 +58,7 @@ class Command extends \Oil\Command
                         break;
 
                         case 'scaffold':
-                            call_user_func('Oil\Generate_Scaffold::forge', array_slice($args, 3), $subfolder);
+                            call_user_func('UtilOil\Generate_Scaffold::forge', array_slice($args, 3), $subfolder);
                         break;
 
                         default:

@@ -146,8 +146,8 @@ class Generate_Scaffold extends \Oil\Generate_Scaffold
         foreach (array('index', 'view', 'create', 'edit', '_form') as $view)
         {
             \Oil\Generate::create(
-                APPPATH.'views/'.$controller_path.'/'.$view.'.php',
-                \View::forge(static::$view_subdir.$subfolder.'/views/actions/'.$view, $data),
+                APPPATH.'views/'.$controller_path.'/'.$view.'.twig',
+                \View::forge(APPPATH.'scaffolding/orm/views/actions/'.$view.'.php', $data),
                 'view'
             );
         }
