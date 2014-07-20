@@ -4,10 +4,10 @@ class <?php echo \Config::get('controller_prefix', 'Controller_').$controller_na
 {
 
 <?php foreach ($actions as $action): ?>
-	public function action_<?php echo $action['name']; ?>(<?php echo $action['params']; ?>)
-	{
+    public function action_<?php echo $action['name']; ?>(<?php echo $action['params']; ?>)
+    {
 <?php echo $action['code'].PHP_EOL; ?>
-	}
+    }
 
 <?php endforeach; ?>
 
