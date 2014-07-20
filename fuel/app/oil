@@ -55,7 +55,7 @@ Package::load('oil');
 
 // Run Original Template
 require APPPATH . 'classes/oil/command.php';
-// require APPPATH . 'classes/oil/generate/scaffold.php';
+require APPPATH . 'classes/oil/generate/scaffold.php';
 
 // Fire up the command line interfact
 UtilOil\Command::init($_SERVER['argv']);
