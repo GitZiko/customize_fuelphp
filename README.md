@@ -15,7 +15,7 @@
 
 ## composer update
 * 1.php composer.phar self-update
-* 2.php composer.phar self-update
+* 2.php composer.phar update
 
 ## oilコマンド実行
 拡張したoilコマンドはfuel/app以下に配置してあります。
